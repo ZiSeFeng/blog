@@ -1,13 +1,16 @@
+const path = require('path');
+
 module.exports = {
-  base: '/myblog',
+  base: '/blog',
   repo: 'https://zisefeng.github.io/blog/',
   // host: '',
+  dest: 'dist',
   markdown: {
     lineNumbers: true
   },
   title: "潇潇风雨博客",
-  description: '前端工程师 前端进阶',
-  dest: 'public',
+  description: '前端进阶',
+  dest: './docs/.vuepress/dist',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ["link", { rel: "manifest", href: "/manifest.json" }],
@@ -99,6 +102,21 @@ module.exports = {
   },
   markdown: {
     lineNumbers: true
+  },
+  // configureWebpack: {
+  //   resolve: {
+  //     alias: {
+  //       '@vuepress': path.join(__dirname, '../images/vuepress'),
+  //     }
+  //   }
+  // },
+  algolia: { // 设置搜索
+    apiKey: '<API_KEY>',
+    indexName: '<INDEX_NAME>'
+  },
+  valineConfig: {
+    appId: '...',// your appId
+    appKey: '...', // your appKey
   },
   plugins: [
     ['@vuepress/pwa', {

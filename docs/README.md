@@ -9,7 +9,7 @@ heroImageStyle: {
 }
 heroText: 风雨下
 tagline: 生活精彩
-isShowTitleInHome: true
+isShowTitleInHome: false
 actionText: Guide
 actionLink: /views/other/guide
 features:
