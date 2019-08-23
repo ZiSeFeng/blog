@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>如何通过动态更改vue中的样式 | 潇潇风雨</title>
+    <meta name="description" content="前端进阶">
+    <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.68f79b53.css" as="style"><link rel="preload" href="/assets/js/app.fc8981ed.js" as="script"><link rel="preload" href="/assets/js/4.4cc6fc2d.js" as="script"><link rel="preload" href="/assets/js/1.c4e3d890.js" as="script"><link rel="preload" href="/assets/js/23.20fafd2d.js" as="script"><link rel="prefetch" href="/assets/js/10.d93f9295.js"><link rel="prefetch" href="/assets/js/11.39a7f5bb.js"><link rel="prefetch" href="/assets/js/12.14fec621.js"><link rel="prefetch" href="/assets/js/13.e5e11607.js"><link rel="prefetch" href="/assets/js/14.c60aa13b.js"><link rel="prefetch" href="/assets/js/15.4305e8bb.js"><link rel="prefetch" href="/assets/js/16.68bd8f16.js"><link rel="prefetch" href="/assets/js/17.c33994d6.js"><link rel="prefetch" href="/assets/js/18.37c97fb6.js"><link rel="prefetch" href="/assets/js/19.9294132d.js"><link rel="prefetch" href="/assets/js/20.34ec00a6.js"><link rel="prefetch" href="/assets/js/21.a7d5e2ab.js"><link rel="prefetch" href="/assets/js/22.566c64b2.js"><link rel="prefetch" href="/assets/js/24.4e1869a2.js"><link rel="prefetch" href="/assets/js/25.d72d5ec7.js"><link rel="prefetch" href="/assets/js/26.88d811cd.js"><link rel="prefetch" href="/assets/js/27.29083787.js"><link rel="prefetch" href="/assets/js/28.e601fb73.js"><link rel="prefetch" href="/assets/js/29.8a013a62.js"><link rel="prefetch" href="/assets/js/30.5a4822bc.js"><link rel="prefetch" href="/assets/js/5.0cc2b899.js"><link rel="prefetch" href="/assets/js/6.e6a567d4.js"><link rel="prefetch" href="/assets/js/7.295fe7d3.js"><link rel="prefetch" href="/assets/js/8.5f9a913f.js"><link rel="prefetch" href="/assets/js/9.2ebd37bf.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.e498eb07.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.68f79b53.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><div><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="潇潇风雨" class="logo"> <span class="site-name">潇潇风雨</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox" checked="checked"></div></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  backEnd
+</a></li><li class="dropdown-item"><!----> <a href="/category/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  frontEnd
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/notes/frontEnd/" class="nav-link router-link-active"><i class="iconfont undefined"></i>
+  笔记
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.npmjs.com/~reco_luan" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-npm"></i>
+  NPM
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/ZiSeFeng" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/cd674a19515e" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/maggie_live" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.cnblogs.com/luanhewei/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-bokeyuan"></i>
+  博客圆
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/mXFqeUTegdvPliXknAAG_A" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-wechat"></i>
+  WeChat
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  backEnd
+</a></li><li class="dropdown-item"><!----> <a href="/category/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  frontEnd
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/notes/frontEnd/" class="nav-link router-link-active"><i class="iconfont undefined"></i>
+  笔记
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.npmjs.com/~reco_luan" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-npm"></i>
+  NPM
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/ZiSeFeng" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/cd674a19515e" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/maggie_live" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.cnblogs.com/luanhewei/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-bokeyuan"></i>
+  博客圆
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/mXFqeUTegdvPliXknAAG_A" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-wechat"></i>
+  WeChat
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>vue</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/notes/frontEnd/vue自定义指令.html" class="sidebar-link">vue自定义指令</a></li><li><a href="/notes/frontEnd/如何通过动态更改vue中的样式.html" class="active sidebar-link">如何通过动态更改vue中的样式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/frontEnd/如何通过动态更改vue中的样式.html#绑定class的几种方式" class="sidebar-link">绑定class的几种方式</a></li><li class="sidebar-sub-header"><a href="/notes/frontEnd/如何通过动态更改vue中的样式.html#绑定内联样式" class="sidebar-link">绑定内联样式</a></li></ul></li><li><a href="/notes/frontEnd/vue-cli3创建项目（1）.html" class="sidebar-link">vue-cli3创建项目（1）</a></li><li><a href="/notes/frontEnd/vue-cli3 适配移动端rem.html" class="sidebar-link">vue-cli3 适配移动端rem</a></li><li><a href="/notes/frontEnd/vue-cli3 使用svg-sprite-loader的使用.html" class="sidebar-link">vue-cli3 使用svg-sprite-loader的使用</a></li><li><a href="/notes/frontEnd/vue-cli 统一封装axios，使用拦截器统一出来请求前和请求后处理.html" class="sidebar-link">vue-cli 统一封装axios，使用拦截器统一出来请求前和请求后处理</a></li><li><a href="/notes/frontEnd/vue element-UI table嵌套表格 无法更新视图.html" class="sidebar-link">vue element-UI table嵌套表格 无法更新视图</a></li><li><a href="/notes/frontEnd/vue中使用编辑器vue-quill-editor踩过的坑.html" class="sidebar-link">vue中使用编辑器vue-quill-editor踩过的坑</a></li><li><a href="/notes/frontEnd/vue中使用element-ui监听键盘事件，input只能输入纯数字.html" class="sidebar-link">vue中使用element-ui监听键盘事件，input只能输入纯数字</a></li><li><a href="/notes/frontEnd/vue-cli3报错 Jest TypeError_ Path must be a string. Received undefined.html" class="sidebar-link">vue-cli3报错 Jest TypeError_ Path must be a string. Received undefined</a></li><li><a href="/notes/frontEnd/【vue项目总结】后台管理项目总结.html" class="sidebar-link">【vue项目总结】后台管理项目总结</a></li><li><a href="/notes/frontEnd/vue 12种通信方式.html" class="sidebar-link">vue 12种通信方式</a></li></ul></section></li></ul> </aside> <div><main class="page reco-hide"> <div class="page-title"><h1>如何通过动态更改vue中的样式</h1> <hr> <div data-v-362e684e><i class="iconfont reco-account" data-v-362e684e><span data-v-362e684e>maggie</span></i> <i class="iconfont reco-date" data-v-362e684e><span data-v-362e684e>2019-7-17</span></i> <!----> <!----></div></div> <div class="content__default"><p>通过使用v-bind绑定class和style动态的改变DOM元素的样式。v-bind的基本用法以及它的语法糖，它主要用法是动态更新HTML元素上的属性。</p> <h2 id="绑定class的几种方式"><a href="#绑定class的几种方式" aria-hidden="true" class="header-anchor">#</a> 绑定class的几种方式</h2> <h3 id="_1-对象语法"><a href="#_1-对象语法" aria-hidden="true" class="header-anchor">#</a> 1.对象语法</h3> <p>给v-bind:class设置一个对象，可以动态地切换class。例如：</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;app&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div :class<span class="token operator">=</span><span class="token string">&quot;{'active': isActive}&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  var app <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el: <span class="token string">'#app'</span>,
+    data: <span class="token punctuation">{</span>
+      isActive: <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>对象中也可以传入多个参数，来动态地切换class，:class可以和普通class同存。</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;app&quot;</span><span class="token operator">&gt;</span>
+ <span class="token operator">&lt;</span>div :class<span class="token operator">=</span><span class="token string">&quot;{'active': isActive, 'error': isError}&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+ var app <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+   el: <span class="token string">'#app'</span>,
+   data: <span class="token punctuation">{</span>
+     isActive: true,
+     isError: <span class="token boolean">false</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>当:class的表达式过长或逻辑复杂时，还可以绑定一个计算属性。</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;app&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div :class<span class="token operator">=</span><span class="token string">&quot;classes&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  var app <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el: <span class="token string">'#app'</span>,
+    data: <span class="token punctuation">{</span>
+      isActive: true,
+      error: null
+    <span class="token punctuation">}</span>,
+    computed: <span class="token punctuation">{</span>
+      classes: <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token builtin class-name">return</span> <span class="token punctuation">{</span>
+          active: this.isActive <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>this.error,
+          <span class="token string">'text-fail'</span><span class="token builtin class-name">:</span> this.error <span class="token operator">&amp;&amp;</span> this.error.type <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'fail'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>除了计算属性，也可以直接绑定一个Object类型的数据，或者使用类似计算属性的methods。</p> <h3 id="_2-数组语法"><a href="#_2-数组语法" aria-hidden="true" class="header-anchor">#</a> 2.数组语法</h3> <p>给:class绑定一个数组</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;app&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div :class<span class="token operator">=</span><span class="token string">&quot;[activeCls, errorCls]&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  var app <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el: <span class="token string">'#app'</span>,
+    data: <span class="token punctuation">{</span>
+      activeCls: ‘active<span class="token string">',
+      errorCls: '</span>error'
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>也可以使用三元表达式切换class</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>// 方法1
+<span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;app&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div :class<span class="token operator">=</span><span class="token string">&quot;[isActive ? ' activeCls: '', errorCls]&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  var app <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el: <span class="token string">'#app'</span>,
+    data: <span class="token punctuation">{</span>
+      isActive: true,
+      activeCls: <span class="token string">'active'</span>,
+      errorCls: <span class="token string">'error'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+
+// 方法2
+<span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;app&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div :class<span class="token operator">=</span><span class="token string">&quot;[{'active': isActive}, errorCls]&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  var app <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el: <span class="token string">'#app'</span>,
+    data: <span class="token punctuation">{</span>
+      isActive: true,
+      errorCls: <span class="token string">'error'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+
+// 方法3
+<span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;app&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div :class<span class="token operator">=</span><span class="token string">&quot;classes&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  var app <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el: <span class="token string">'#app'</span>,
+    data: <span class="token punctuation">{</span>
+      size: <span class="token string">'large'</span>,
+      disabled: <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>,
+    computed: <span class="token punctuation">{</span>
+      classes: <span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token builtin class-name">return</span> <span class="token punctuation">{</span>
+        <span class="token string">'btn'</span>,
+        <span class="token punctuation">{</span>
+          <span class="token punctuation">[</span><span class="token string">'btn-'</span>+this.size<span class="token punctuation">]</span>: this.size <span class="token operator">!=</span> <span class="token string">',
+          ['</span>btn-disabled'<span class="token punctuation">]</span>: this.disabled
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br></div></div><h3 id="_3-组件上使用"><a href="#_3-组件上使用" aria-hidden="true" class="header-anchor">#</a> 3.组件上使用</h3> <p>这种用法使用于自定义组件的最外层是一个根元素，否则无效。当不满足这样的条件或需要给具体的子元素设置类名时，应当使用组件的props来传递。</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>Vue.component<span class="token punctuation">(</span><span class="token string">'my-component'</span>, <span class="token punctuation">{</span>
+  template: <span class="token string">'&lt;p class=&quot;text&quot;&gt;文本&lt;/p&gt;
+});
+
+&lt;div id=&quot;app&quot;&gt;
+ &lt;my-component :class=&quot;{'</span>active<span class="token string">': isActive}&gt;&lt;/my-component&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+ var app = new Vue({
+  el: '</span><span class="token comment">#app',</span>
+  data: <span class="token punctuation">{</span>
+    isActive: <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="绑定内联样式"><a href="#绑定内联样式" aria-hidden="true" class="header-anchor">#</a> 绑定内联样式</h2> <p>使用:style和:class使用方法类似，也有对象语法和数组语法。</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>// 方法一
+<span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;app&quot;</span><span class="token operator">&gt;</span>
+ <span class="token operator">&lt;</span>div :style<span class="token operator">=</span><span class="token string">&quot;{'color': color, 'fontSize': fontSize+'px}&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+ var app <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+   el: <span class="token string">'#app'</span>,
+   data: <span class="token punctuation">{</span>
+     color: <span class="token string">'red'</span>,
+     fontSize: <span class="token number">14</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+
+//方法二
+<span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;app&quot;</span><span class="token operator">&gt;</span>
+ <span class="token operator">&lt;</span>div :style<span class="token operator">=</span><span class="token string">&quot;styles&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+ var app <span class="token operator">=</span> new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+   el: <span class="token string">'#app'</span>,
+   data: <span class="token punctuation">{</span>
+     styles: <span class="token punctuation">{</span>
+       color: <span class="token string">'red'</span>,
+       fontSize: <span class="token number">14</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div></div> <!----> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/notes/frontEnd/vue自定义指令.html" class="prev">
+          vue自定义指令
+        </a></span> <span class="next"><a href="/notes/frontEnd/vue-cli3创建项目（1）.html">
+          vue-cli3创建项目（1）
+        </a>
+        →
+      </span></p></div> </main> <div class="valine-wrapper" data-v-5029e45b><div id="valine" data-v-5029e45b></div></div></div> <div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-cd623d78 data-v-cd623d78><i class="iconfont reco-up" data-v-cd623d78></i></div></div></div></div><div class="global-ui"><SWUpdatePopup></SWUpdatePopup></div></div>
+    <script src="/assets/js/app.fc8981ed.js" defer></script><script src="/assets/js/4.4cc6fc2d.js" defer></script><script src="/assets/js/1.c4e3d890.js" defer></script><script src="/assets/js/23.20fafd2d.js" defer></script>
+  </body>
+</html>
