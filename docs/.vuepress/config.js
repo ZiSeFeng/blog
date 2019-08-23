@@ -1,14 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  base: '/blog',
+  // base: '/blog/',
   repo: 'https://zisefeng.github.io/blog/',
   // host: '',
   dest: 'dist',
   markdown: {
     lineNumbers: true
   },
-  title: "潇潇风雨博客",
+  title: "潇潇风雨",
   description: '前端进阶',
   dest: './docs/.vuepress/dist',
   head: [
@@ -21,7 +21,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '主页', link: '/', icon: 'reco-home' },
-      { text: '学习文档', link: '/notes/frontEnd/' },
+      { text: '笔记', link: '/notes/frontEnd/' },
       { text: '时间轴', link: '/timeLine/', icon: 'reco-date' },
       // {
       //   text: 'Languages',
@@ -65,9 +65,18 @@ module.exports = {
           title: 'vue',
           collapsable: true,
           children: [
-            '/notes/frontEnd/VueJS组件编码规范',
-            '/notes/frontEnd/vue-cli脚手架快速搭建项目',
-            '/notes/frontEnd/深入理解vue中的slot与slot-scope'
+            '/notes/frontEnd/vue自定义指令',
+            '/notes/frontEnd/如何通过动态更改vue中的样式',
+            '/notes/frontEnd/vue-cli3创建项目（1）',
+            '/notes/frontEnd/vue-cli3 适配移动端rem',
+            '/notes/frontEnd/vue-cli3 使用svg-sprite-loader的使用',
+            '/notes/frontEnd/vue-cli 统一封装axios，使用拦截器统一出来请求前和请求后处理',
+            '/notes/frontEnd/vue element-UI table嵌套表格 无法更新视图',
+            '/notes/frontEnd/vue中使用编辑器vue-quill-editor踩过的坑',
+            '/notes/frontEnd/vue中使用element-ui监听键盘事件，input只能输入纯数字',
+            '/notes/frontEnd/vue-cli3报错 Jest TypeError_ Path must be a string. Received undefined',
+            '/notes/frontEnd/【vue项目总结】后台管理项目总结',
+            '/notes/frontEnd/vue 12种通信方式'
           ]
         },
       ]

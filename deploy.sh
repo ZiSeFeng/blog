@@ -4,6 +4,10 @@ set -e
 # 生成静态文件
 npm run docs:build
 
+# 发布到自定义域名
+echo "把域名放到CNAME文件中"
+echo 'myblog.mqmydream.com' > CNAME
+
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 # echo 'blog.mqmydream.com' > CNAME
