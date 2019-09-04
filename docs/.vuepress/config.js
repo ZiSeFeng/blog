@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  // base: '/blog/',
+  base: '/blog/',
   repo: 'https://zisefeng.github.io/blog/',
   // host: '',
   dest: 'dist',
@@ -21,24 +21,17 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '主页', link: '/', icon: 'reco-home' },
-      { text: '笔记', link: '/notes/frontEnd/' },
+      { text: '笔记', link: '/notes/frontEnd/', icon: 'reco-suggestion' },
       { text: '时间轴', link: '/timeLine/', icon: 'reco-date' },
-      // {
-      //   text: 'Languages',
-      //   items: [
-      //     { text: 'Chinese', link: '/language/chinese/' },
-      //     { text: 'Japanese', link: '/language/japanese/' }
-      //   ]
-      // },
       { text: 'contact', 
         icon: 'reco-message',
         items: [
-          { text: 'NPM', link: 'https://www.npmjs.com/~reco_luan', icon: 'reco-npm' },
+          { text: 'NPM', link: 'https://www.npmjs.com/~zisefeng', icon: 'reco-npm' },
           { text: 'GitHub', link: 'https://github.com/ZiSeFeng', icon: 'reco-github' },
-          { text: '简书', link: 'https://www.jianshu.com/u/cd674a19515e', icon: 'reco-jianshu' },
+          { text: '简书', link: 'https://www.jianshu.com/u/ba26da82e3cd', icon: 'reco-jianshu' },
           { text: 'CSDN', link: 'https://blog.csdn.net/maggie_live', icon: 'reco-csdn' },
-          { text: '博客圆', link: 'https://www.cnblogs.com/luanhewei/', icon: 'reco-bokeyuan' },
-          { text: 'WeChat', link: 'https://mp.weixin.qq.com/s/mXFqeUTegdvPliXknAAG_A', icon: 'reco-wechat' },
+          { text: 'segmentfault', link: 'https://segmentfault.com/u/fengyu_5d5fab349a586/articles', icon: 'reco-sf' },
+          { text: 'WeChat', link: 'https://mp.weixin.qq.com/s/n3c9QN0KJhgzuqCNT0EfrA', icon: 'reco-wechat' },
         ]
       }
     ],
@@ -65,20 +58,27 @@ module.exports = {
           title: 'vue',
           collapsable: true,
           children: [
-            '/notes/frontEnd/vue自定义指令',
-            '/notes/frontEnd/如何通过动态更改vue中的样式',
-            '/notes/frontEnd/vue-cli3创建项目（1）',
-            '/notes/frontEnd/vue-cli3 适配移动端rem',
-            '/notes/frontEnd/vue-cli3 使用svg-sprite-loader的使用',
-            '/notes/frontEnd/vue-cli 统一封装axios，使用拦截器统一出来请求前和请求后处理',
-            '/notes/frontEnd/vue element-UI table嵌套表格 无法更新视图',
-            '/notes/frontEnd/vue中使用编辑器vue-quill-editor踩过的坑',
-            '/notes/frontEnd/vue中使用element-ui监听键盘事件，input只能输入纯数字',
-            '/notes/frontEnd/vue-cli3报错 Jest TypeError_ Path must be a string. Received undefined',
-            '/notes/frontEnd/【vue项目总结】后台管理项目总结',
-            '/notes/frontEnd/vue 12种通信方式'
+            '/notes/frontEnd/vue/vue自定义指令',
+            '/notes/frontEnd/vue/如何通过动态更改vue中的样式',
+            '/notes/frontEnd/vue/vue-cli3创建项目（1）',
+            '/notes/frontEnd/vue/vue-cli3 适配移动端rem',
+            '/notes/frontEnd/vue/vue-cli3 使用svg-sprite-loader的使用',
+            '/notes/frontEnd/vue/vue-cli 统一封装axios，使用拦截器统一出来请求前和请求后处理',
+            '/notes/frontEnd/vue/vue element-UI table嵌套表格 无法更新视图',
+            '/notes/frontEnd/vue/vue中使用编辑器vue-quill-editor踩过的坑',
+            '/notes/frontEnd/vue/vue中使用element-ui监听键盘事件，input只能输入纯数字',
+            '/notes/frontEnd/vue/vue-cli3报错 Jest TypeError_ Path must be a string. Received undefined',
+            '/notes/frontEnd/vue/【vue项目总结】后台管理项目总结',
+            '/notes/frontEnd/vue/vue 12种通信方式'
           ]
         },
+        {
+          title: 'Webpack',
+          collapsable: true,
+          children: [
+            '/notes/frontEnd/webpack/使用webpck4兼容ios8自动添加前缀'
+          ]
+        }
       ]
     },
     // 最后更新时间
@@ -90,6 +90,7 @@ module.exports = {
     // 项目开始时间
     startYear: '2019',
     lastUpdated: 'Last Updated', // string | boolean
+    serviceWorker: true, 
     /**
      * 密钥 (if your blog is private)
      */
@@ -104,10 +105,10 @@ module.exports = {
      * valine 设置 (if you need valine comment )
      */
 
-    // valineConfig: {
-    //   appId: '...',// your appId
-    //   appKey: '...', // your appKey
-    // }
+    valineConfig: {
+      appId: 'VkBD5RESmUkJlCMnRvikO0vD-gzGzoHsz',// your appId
+      appKey: 'tHmqvwxnjnfG5p4I8weEtit2', // your appKey
+    }
   },
   markdown: {
     lineNumbers: true
@@ -123,10 +124,6 @@ module.exports = {
     apiKey: '<API_KEY>',
     indexName: '<INDEX_NAME>'
   },
-  valineConfig: {
-    appId: '...',// your appId
-    appKey: '...', // your appKey
-  },
   plugins: [
     ['@vuepress/pwa', {
       serviceWorker: true,
@@ -141,7 +138,9 @@ module.exports = {
         }
       }
     }], 
-    '@vuepress/medium-zoom',
+    ['@vuepress/plugin-medium-zoom', {
+      selector: 'img'
+    }],
     'flowchart',
     '@vuepress/nprogress',
     // '@vuepress/back-to-top',

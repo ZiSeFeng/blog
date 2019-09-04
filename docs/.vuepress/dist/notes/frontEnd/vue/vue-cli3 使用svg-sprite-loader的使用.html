@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue-cli3 使用svg-sprite-loader的使用 | 潇潇风雨</title>
+    <meta name="description" content="前端进阶">
+    <link rel="icon" href="/blog/favicon.ico">
+  <link rel="manifest" href="/blog/manifest.json">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.2d56dd03.css" as="style"><link rel="preload" href="/blog/assets/js/app.543d1d86.js" as="script"><link rel="preload" href="/blog/assets/js/4.4a4ae430.js" as="script"><link rel="preload" href="/blog/assets/js/1.8473d85e.js" as="script"><link rel="preload" href="/blog/assets/js/12.7967cc54.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.dd05c9ae.js"><link rel="prefetch" href="/blog/assets/js/11.704daa2d.js"><link rel="prefetch" href="/blog/assets/js/13.58ec5d38.js"><link rel="prefetch" href="/blog/assets/js/14.15b9291f.js"><link rel="prefetch" href="/blog/assets/js/15.c77358df.js"><link rel="prefetch" href="/blog/assets/js/16.38a2cba5.js"><link rel="prefetch" href="/blog/assets/js/17.73f1995f.js"><link rel="prefetch" href="/blog/assets/js/18.67c1ce43.js"><link rel="prefetch" href="/blog/assets/js/19.fd5ec747.js"><link rel="prefetch" href="/blog/assets/js/20.799c2c0d.js"><link rel="prefetch" href="/blog/assets/js/21.3d0be58a.js"><link rel="prefetch" href="/blog/assets/js/22.9a32260f.js"><link rel="prefetch" href="/blog/assets/js/23.c1bb34bb.js"><link rel="prefetch" href="/blog/assets/js/24.b6f48206.js"><link rel="prefetch" href="/blog/assets/js/25.a9c8af90.js"><link rel="prefetch" href="/blog/assets/js/26.d6b4b4de.js"><link rel="prefetch" href="/blog/assets/js/27.81e1a0c5.js"><link rel="prefetch" href="/blog/assets/js/28.723cb083.js"><link rel="prefetch" href="/blog/assets/js/29.8d6a70a1.js"><link rel="prefetch" href="/blog/assets/js/30.5e3378bd.js"><link rel="prefetch" href="/blog/assets/js/31.253f3a2c.js"><link rel="prefetch" href="/blog/assets/js/32.d029cca0.js"><link rel="prefetch" href="/blog/assets/js/33.436d4951.js"><link rel="prefetch" href="/blog/assets/js/34.8e2ef724.js"><link rel="prefetch" href="/blog/assets/js/35.4d05ddf0.js"><link rel="prefetch" href="/blog/assets/js/36.f8d72183.js"><link rel="prefetch" href="/blog/assets/js/5.652e39a8.js"><link rel="prefetch" href="/blog/assets/js/6.f1706e65.js"><link rel="prefetch" href="/blog/assets/js/7.c478878f.js"><link rel="prefetch" href="/blog/assets/js/8.0df47dbb.js"><link rel="prefetch" href="/blog/assets/js/9.52d61668.js"><link rel="prefetch" href="/blog/assets/js/vendors~flowchart.17919d1c.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.2d56dd03.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><div><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/head.png" alt="潇潇风雨" class="logo"> <span class="site-name">潇潇风雨</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox" checked="checked"></div></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/category/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  backEnd
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  frontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/git.html" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/计算机基础.html" class="nav-link"><i class="iconfont undefined"></i>
+  计算机基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/安全.html" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/notes/frontEnd/" class="nav-link router-link-active"><i class="iconfont reco-suggestion"></i>
+  笔记
+</a></div><div class="nav-item"><a href="/blog/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.npmjs.com/~zisefeng" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-npm"></i>
+  NPM
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/ZiSeFeng" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/ba26da82e3cd" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/maggie_live" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://segmentfault.com/u/fengyu_5d5fab349a586/articles" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-sf"></i>
+  segmentfault
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/n3c9QN0KJhgzuqCNT0EfrA" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-wechat"></i>
+  WeChat
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/category/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  backEnd
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  frontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/git.html" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/计算机基础.html" class="nav-link"><i class="iconfont undefined"></i>
+  计算机基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/安全.html" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/notes/frontEnd/" class="nav-link router-link-active"><i class="iconfont reco-suggestion"></i>
+  笔记
+</a></div><div class="nav-item"><a href="/blog/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.npmjs.com/~zisefeng" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-npm"></i>
+  NPM
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/ZiSeFeng" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/ba26da82e3cd" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/maggie_live" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://segmentfault.com/u/fengyu_5d5fab349a586/articles" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-sf"></i>
+  segmentfault
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/n3c9QN0KJhgzuqCNT0EfrA" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-wechat"></i>
+  WeChat
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>vue</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/notes/frontEnd/vue/vue自定义指令.html" class="sidebar-link">vue自定义指令</a></li><li><a href="/blog/notes/frontEnd/vue/如何通过动态更改vue中的样式.html" class="sidebar-link">如何通过动态更改vue中的样式</a></li><li><a href="/blog/notes/frontEnd/vue/vue-cli3创建项目（1）.html" class="sidebar-link">vue-cli3创建项目（1）</a></li><li><a href="/blog/notes/frontEnd/vue/vue-cli3 适配移动端rem.html" class="sidebar-link">vue-cli3 适配移动端rem</a></li><li><a href="/blog/notes/frontEnd/vue/vue-cli3 使用svg-sprite-loader的使用.html" class="active sidebar-link">vue-cli3 使用svg-sprite-loader的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/notes/frontEnd/vue/vue-cli3 使用svg-sprite-loader的使用.html#_1-为什么使用svg-sprite-loader？" class="sidebar-link">1.为什么使用svg-sprite-loader？</a></li><li class="sidebar-sub-header"><a href="/blog/notes/frontEnd/vue/vue-cli3 使用svg-sprite-loader的使用.html#_2-实现svg-sprite-loader" class="sidebar-link">2.实现svg-sprite-loader</a></li></ul></li><li><a href="/blog/notes/frontEnd/vue/vue-cli 统一封装axios，使用拦截器统一出来请求前和请求后处理.html" class="sidebar-link">vue-cli 统一封装axios，使用拦截器统一出来请求前和请求后处理</a></li><li><a href="/blog/notes/frontEnd/vue/vue element-UI table嵌套表格 无法更新视图.html" class="sidebar-link">vue element-UI table嵌套表格 无法更新视图</a></li><li><a href="/blog/notes/frontEnd/vue/vue中使用编辑器vue-quill-editor踩过的坑.html" class="sidebar-link">vue中使用编辑器vue-quill-editor踩过的坑</a></li><li><a href="/blog/notes/frontEnd/vue/vue中使用element-ui监听键盘事件，input只能输入纯数字.html" class="sidebar-link">vue中使用element-ui监听键盘事件，input只能输入纯数字</a></li><li><a href="/blog/notes/frontEnd/vue/vue-cli3报错 Jest TypeError_ Path must be a string. Received undefined.html" class="sidebar-link">vue-cli3报错 Jest TypeError_ Path must be a string. Received undefined</a></li><li><a href="/blog/notes/frontEnd/vue/【vue项目总结】后台管理项目总结.html" class="sidebar-link">【vue项目总结】后台管理项目总结</a></li><li><a href="/blog/notes/frontEnd/vue/vue 12种通信方式.html" class="sidebar-link">vue 12种通信方式</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Webpack</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page reco-hide"> <div class="page-title"><h1>vue-cli3 使用svg-sprite-loader的使用</h1> <hr> <div data-v-8f042278><i class="iconfont reco-account" data-v-8f042278><span data-v-8f042278>maggie</span></i> <i class="iconfont reco-date" data-v-8f042278><span data-v-8f042278>2019-5-13</span></i> <span id="/blog/notes/frontEnd/vue/vue-cli3%20%E4%BD%BF%E7%94%A8svg-sprite-loader%E7%9A%84%E4%BD%BF%E7%94%A8.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-543f3870 data-v-8f042278><i class="iconfont reco-eye" style="margin-right: .5rem" data-v-543f3870></i> <a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;" data-v-543f3870></a></span> <!----></div></div> <div class="content__default"><h2 id="_1-为什么使用svg-sprite-loader？"><a href="#_1-为什么使用svg-sprite-loader？" aria-hidden="true" class="header-anchor">#</a> 1.为什么使用svg-sprite-loader？</h2> <blockquote><p>用来根据导入的svg文件自动生成symbol标签并插入html，接下来就可以在模板忠方便地使用svg-sprite技术了</p></blockquote> <p>通常我们项目都是使用<a href="https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2" target="_blank" rel="noopener noreferrer">iconfont阿里巴巴图标矢量库<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，<strong>缺点：</strong></p> <ul><li>操作繁琐，每次ui需要加一些新的图标的时候，都要重新下载图标库的项目，然后把整体的文件（其中包括css,svg,ttf,woff等）替换掉。</li> <li>如果更改名称的话，需要在图标库里改一次，然后进行下载复制拷贝。</li> <li>iconfont网站库图标内容有限，特殊业务条件需要uimm们自己设计的图(PSD小图标变身SVG Sprites/font-face历险记)</li></ul> <p><strong><a href="https://cn.vuejs.org/v2/cookbook/editable-svg-icons.html" target="_blank" rel="noopener noreferrer">svg<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>优点：</strong></p> <ul><li>图标易于实时修改</li> <li>图标可以带动画</li> <li>可以使用标砖的prop和默认值来将图标保持在一个典型的尺寸并随时按需改变他们</li> <li>图标是内联的，所以不需要额外的HTTP请求</li> <li>可以动态地使得图标可访问</li></ul> <h2 id="_2-实现svg-sprite-loader"><a href="#_2-实现svg-sprite-loader" aria-hidden="true" class="header-anchor">#</a> 2.实现svg-sprite-loader</h2> <ol><li>使用终端命名引入</li></ol> <blockquote><p>cnpm i svg-sprite-loader --save-dev</p></blockquote> <ol start="2"><li>在vue.config.js配置文件中增加svg的配置</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>    // set svg-sprite-loader
+   config.module
+     .rule('svg')
+     .exclude.add(resolve('src/icons'))
+     .end();
+   config.module
+     .rule('icons')
+     .test(/\.svg$/)
+     .include.add(resolve('src/icons'))
+     .end()
+     .use('svg-sprite-loader')
+     .loader('svg-sprite-loader')
+     .options({
+       symbolId: 'icon-[name]'
+     })
+     .end();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p><strong>注意</strong></p> <ul><li>options可以不要，默认的id是svg的文件名=name；</li> <li>使用svg时，id形式与symbol保持一致；</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;template&gt;
+&lt;svg :class=&quot;svgClass&quot; aria-hidden=&quot;true&quot; v-on=&quot;$listeners&quot;&gt;
+ &lt;use :xlink:href=&quot;iconName&quot; /&gt;
+&lt;/svg&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+name: 'SvgIcon',
+props: {
+ iconClass: {
+   type: String,
+   required: true
+ },
+ className: {
+   type: String,
+   default: ''
+ }
+},
+computed: {
+ iconName() {
+   return `#icon-${this.iconClass}`;
+ },
+ svgClass() {
+   if (this.className) {
+     return 'svg-icon ' + this.className;
+   } else {
+     return 'svg-icon';
+   }
+ }
+}
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.svg-icon {
+width: 1em;
+height: 1em;
+vertical-align: -0.15em;
+fill: currentColor;
+overflow: hidden;
+}
+&lt;/style&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br></div></div><ul><li>引入svg图标，为了方便可吧所有svg图标放在同一个文件夹中，同一个js脚本文件把这些svg图标全部引入</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>import Vue from 'vue';
+import SvgIcon from '@/components/SvgIcon'; // svg组件
+
+// register globally
+Vue.component('svg-icon', SvgIcon);
+
+const req = require.context('./svg', false, /\.svg$/);
+const requireAll = requireContext =&gt; requireContext.keys().map(requireContext);
+requireAll(req);
+![在这里插入图片描述](../images/20190513104604542.png)
+export default req;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><ul><li>在main.js中引入对应index.js，图标就可以正常显示了。</li></ul> <p>在body下有一个svg标签，里面整合了所有的svg图标，每个symbol都有对应ID。</p> <p><img src="/blog/assets/img/20190513104608670.7ed27bcf.png" alt="在这里插入图片描述"></p> <ul><li>项目开发中到中期时，svg图标就突然不能正常显示，排期好几天，后面才发现由于引入url-load对图片进行处理base64格式问题，导致svg规则被清除
+<img src="/blog/assets/img/20190513104920702.94c60158.png" alt="在这里插入图片描述"></li></ul> <p>这里需要把svg删除</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>config.module
+      .rule('images')
+      .test(/\.(png|jpg|gif)$/) &lt;= 删除svg
+      .use('url-loader')
+      .loader('url-loader')
+      .options({
+        name: 'images/[name].[ext]',
+        limit: 1000
+      })
+      .end();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li>具体组件中使用</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code> &lt;svg-icon v-if=&quot;icon&quot; icon-class=&quot;user&quot;&gt;&lt;/svg-icon&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <!----> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/blog/notes/frontEnd/vue/vue-cli3 适配移动端rem.html" class="prev">
+          vue-cli3 适配移动端rem
+        </a></span> <span class="next"><a href="/blog/notes/frontEnd/vue/vue-cli 统一封装axios，使用拦截器统一出来请求前和请求后处理.html">
+          vue-cli 统一封装axios，使用拦截器统一出来请求前和请求后处理
+        </a>
+        →
+      </span></p></div> </main> <div class="valine-wrapper" data-v-3d4d99c6><div id="valine" data-v-3d4d99c6></div></div></div> <div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-4fd99a39 data-v-4fd99a39><i class="iconfont reco-up" data-v-4fd99a39></i></div></div></div></div><div class="global-ui"><SWUpdatePopup></SWUpdatePopup></div></div>
+    <script src="/blog/assets/js/app.543d1d86.js" defer></script><script src="/blog/assets/js/4.4a4ae430.js" defer></script><script src="/blog/assets/js/1.8473d85e.js" defer></script><script src="/blog/assets/js/12.7967cc54.js" defer></script>
+  </body>
+</html>
